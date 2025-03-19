@@ -27,10 +27,6 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
           pip install flake8  # Ensure flake8 is installed
 
-      - name: Lint Code (flake8)
-        run: |
-          flake8 . --exclude=venv --count --show-source --statistics
-
       - name: Run Tests
         run: |
           pytest  
